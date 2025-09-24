@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite  parallel="tests" name="Suite" thread-count="5">
+
+    <test name = "test1">
+        <groups>
+            <run>
+                <include name="regrassion"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="types_of_execution.Demo15"/>
+            <class name="types_of_execution.Demo16"/>
+        </classes>
+    </test>
+
+</suite>
