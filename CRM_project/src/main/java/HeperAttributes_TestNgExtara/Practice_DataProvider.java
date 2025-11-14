@@ -10,9 +10,8 @@ import org.testng.annotations.Test;
 
 public class Practice_DataProvider {
 	@Test (dataProvider = "getData")
-	public void method1(String un, String pwd) {
-	//	String un1 = "saurabh";
-	//	String pwd1 = "saurabh@123";
+	public void method1(String un, String pwd) throws InterruptedException {
+
 		System.out.println(un);
 		System.out.println(pwd);
 		WebDriver driver = new ChromeDriver();
@@ -22,11 +21,12 @@ public class Practice_DataProvider {
 		driver.findElement(By.id("user-name")).sendKeys(un);
 		driver.findElement(By.id("password")).sendKeys(pwd);
 		driver.findElement(By.id("login-button")).click();
+		Thread.sleep(1000);
+		driver.quit();
 	}
-	
 	@DataProvider
 	public Object[][] getData() throws InterruptedException{
-		Object[][] credentails = new Object[4][2];
+		Object[][] credentails = new Object[2][2];
 		
 		credentails [0][0] = "saurabh";
 		credentails [0][1] = "saurabh@1234";

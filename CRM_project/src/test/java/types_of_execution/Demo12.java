@@ -9,6 +9,7 @@ public class Demo12 {
 	public void case3() throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get("https://www.instagram.com/");
 		driver.quit();
 		Thread.sleep(200);

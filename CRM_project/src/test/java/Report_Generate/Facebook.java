@@ -30,7 +30,6 @@ public class Facebook {
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy_HH-mm-ss");
         String time = now.format(dtf);
 
-        // ✅ Correct path with timestamp
         String reportPath = "C:\\Users\\ss582\\eclipse-workspace\\CRM_project\\src\\test\\java\\advance_html_reports\\Report_" + time + ".html";
 
         ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
@@ -60,13 +59,13 @@ public class Facebook {
         test.log(Status.SKIP, "This is skipped......");
         test.log(Status.FAIL, "This is failed......");
 
-        // ✅ Screenshot
+        //  Screenshot
         TakesScreenshot tks = (TakesScreenshot) driver;
         File src = tks.getScreenshotAs(OutputType.FILE);
         File dest = new File("C:\\Users\\ss582\\eclipse-workspace\\CRM_project\\src\\test\\java\\advance_html_reports\\ss.png");
         FileHandler.copy(src, dest);
 
-        // ✅ Add screenshot to report
+        //  Add screenshot to report
         test.addScreenCaptureFromPath(dest.getAbsolutePath(), "Facebook Screenshot");
 
         driver.quit();

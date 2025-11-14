@@ -17,12 +17,12 @@ public class DemoWebshop {
 		driver.get("https://demowebshop.tricentis.com/");
 		driver.findElement(By.id("small-searchterms")).sendKeys("Saurabh sharma");
 		driver.findElement(By.cssSelector("input[type='submit']")).click();
-//		Alert ale = driver.switchTo().alert();
-  //    	ale.sendKeys("Saurabh sharma");
+		Alert ale = driver.switchTo().alert();
+      	ale.sendKeys("Saurabh sharma");
 		
-		//driver.findElement(By.cssSelector("input[type='submit']")).click();
+		driver.findElement(By.cssSelector("input[type='submit']")).click();
 		Thread.sleep(2000);
-	//	ale.accept();
+		ale.accept();
 		driver.quit();
 
 	}

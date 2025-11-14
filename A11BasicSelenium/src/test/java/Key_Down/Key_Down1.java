@@ -18,40 +18,27 @@ public class Key_Down1 {
         driver.manage().window().maximize();
         driver.get("https://www.instagram.com/");
 
-        // Explicit wait for username field
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement username = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 
         username.sendKeys("myTestUser");
 
-        // Create Actions object
         Actions actions = new Actions(driver);
 
-        // CTRL + A (Select All)
-        actions.keyDown(Keys.CONTROL)
-               .sendKeys("a")
-           //    .keyUp(Keys.CONTROL)
-               .perform();
+        actions.keyDown(Keys.CONTROL).sendKeys("a").perform();
 
         Thread.sleep(2000);
 
         // CTRL + C (Copy)
-        actions.keyDown(Keys.CONTROL)
-               .sendKeys("c")
-            //   .keyUp(Keys.CONTROL)
-               .perform();
-
+        actions.keyDown(Keys.CONTROL).sendKeys("c").keyUp(Keys.CONTROL).perform();
+        
         Thread.sleep(2000);
-
-        // Wait for password field
+        
         WebElement password = driver.findElement(By.name("password"));
         password.click();
 
         // CTRL + V (Paste)
-        actions.keyDown(Keys.CONTROL)
-               .sendKeys("v")
-            //   .keyUp(Keys.CONTROL)
-               .perform();
+        actions.keyDown(Keys.CONTROL).sendKeys("v").perform();
 
         Thread.sleep(3000);
 

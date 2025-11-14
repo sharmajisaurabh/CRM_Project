@@ -10,6 +10,7 @@ public class Demo14 {
 		@Test
 		public void case1() throws InterruptedException {
 			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();
 			driver.get("https://www.amazon.in/");
 			driver.quit();
 			Thread.sleep(200);

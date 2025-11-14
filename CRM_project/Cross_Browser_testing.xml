@@ -9,7 +9,7 @@
     </classes>
   </test>  
 
-  <test parallel="tests" name="t2">
+  <test name="t2">
     <parameter name="bro" value="firefox"/>
     <classes>
       <class name="cross_browser_testing.Demo2Test"/>

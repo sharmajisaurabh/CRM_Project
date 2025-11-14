@@ -8,7 +8,9 @@ public class Demo11 {
 	@Test
 	public void case1() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get("https://www.facebook.com/");
+		driver.manage().window().maximize();
 		driver.quit();
 		Thread.sleep(200);
 		System.out.println("case1 method execute");

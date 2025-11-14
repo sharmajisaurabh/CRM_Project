@@ -1,5 +1,6 @@
 package Report_Generate;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -9,6 +10,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -18,7 +20,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 public class Facebook_ {
 	ExtentReports report;
 	
@@ -59,9 +60,9 @@ public class Facebook_ {
 
 		
 		TakesScreenshot tks = (TakesScreenshot) driver;
-//		File src = tks.getScreenshotAs(OutputType.FILE);
-//		File dest = new File("./advance_html_reports/ss.png");
-//		FileHandler.copy(src, dest); 
+		File src = tks.getScreenshotAs(OutputType.FILE);
+		File dest = new File("./advance_html_reports/ss.png");
+		FileHandler.copy(src, dest); 
 		
 		String ss = tks.getScreenshotAs(OutputType.BASE64);
 		test.addScreenCaptureFromBase64String(ss, "yo ria screen shot");

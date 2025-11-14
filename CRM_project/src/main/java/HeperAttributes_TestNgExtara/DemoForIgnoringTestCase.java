@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class DemoForIgnoringTestCase {
 	@Test
 	public void login() {
-		System.out.println("login page");
+		System.out.println("Login page");
 	}
 	@Test(alwaysRun = true,enabled = false)
 	

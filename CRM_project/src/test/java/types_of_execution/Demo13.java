@@ -9,6 +9,7 @@ public class Demo13 {
 	public void case2() throws InterruptedException {
 		
 		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get("https://www.flipkart.com/");
 		driver.quit();
 		Thread.sleep(500);

@@ -13,7 +13,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Get_Data_From_Properties_File {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
-		FileInputStream fis = new FileInputStream("C:\\Users\\ss582\\eclipse-workspace\\A11BasicSelenium\\src\\test\\resources\\Saurabh.Properties"); 
+		FileInputStream fis = new FileInputStream("C:\\Users\\ss582\\git\\CRM-project\\A11BasicSelenium\\src\\test\\resources\\Saurabh.Properties"); 
 		Properties p = new Properties();
 		p.load(fis);
 		

@@ -17,8 +17,8 @@ public class Shopper_Stack {
     //    System.out.print(sid);
 
 		driver.findElement(By.id("compare")).click();
-	//	driver.findElement(By.cssSelector("button[class=\"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1j7qk7u\"]"));
-//		driver.quit();
+		driver.findElement(By.cssSelector("button[class=\"MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1j7qk7u\"]"));
+		driver.quit();
 
 	}
 }
